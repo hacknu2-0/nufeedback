@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FCM Cloud messaging</title>
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-messaging.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBYFtUilMgTNKbxTvYRJkd-9G4SjzoiBHg",
+        authDomain: "hacknu2-cd9e5.firebaseapp.com",
+        databaseURL: "https://hacknu2-cd9e5.firebaseio.com",
+        projectId: "hacknu2-cd9e5",
+        storageBucket: "hacknu2-cd9e5.appspot.com",
+        messagingSenderId: "889828413017",
+        appId: "1:889828413017:web:facc566ee4a62103f4eb48",
+        measurementId: "G-7DB7C6T9VS"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+
+    <script type="text/javascript">
+      const messaging = firebase.messaging();
+      messaging.requestPermission()
+      .then(() => {
+        console.log('Have Permission');
+        return messaging.getToken();
+      })
+      .then((token) =>{
+        document.write(token);
+      })
+      .catch((err)=>{
+        console.log(err);
+      });
+
+      messaging.onMessage((notification) => {
+        alert(notification);
+      })
+       </script>
+  </body>
+</html>
