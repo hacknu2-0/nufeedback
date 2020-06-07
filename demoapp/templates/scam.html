@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="/static/tailwind.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style> 
+.nigga input:checked + svg {
+    display: block !important;
+}
+.slidecontainer {
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(160, 174, 192);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(160, 174, 192);
+  cursor: pointer;
+}
+</style>
+<body style="background-color: #2C2F33">
+<form action="/feedback" method="post">
+	<div class="container mx-auto mt-8 rounded-lg py-4 px-4 flex" style="background-color: #2C2F33">
+		<div class="mx-auto flex">
+			<label class="bg-gray-500 shadow w-6 h-6 p-1 flex justify-center items-center mr-2 nigga rounded-lg">
+				<input type="checkbox" name="topic1" class="hidden" >
+				<svg class="hidden w-4 h-4 text-white pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
+			</label>
+			<h2 class="text-white">Finite Automata</h2>
+		</div>
+	</div>
+    <div class="container mx-auto mt-8 rounded-lg py-4 px-4 flex" style="background-color: #2C2F33">
+		<div class="mx-auto flex">
+			<label class="bg-gray-500 shadow w-6 h-6 p-1 flex justify-center items-center mr-2 nigga rounded-lg">
+				<input type="checkbox" name="topic2" class="hidden" >
+				<svg class="hidden w-4 h-4 text-white pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
+			</label>
+			<h2 class="text-white">Context Free Grammar</h2>
+		</div>
+	</div>
+    <div class="container mx-auto mt-8 rounded-lg py-4 px-4 flex" style="background-color: #2C2F33">
+		<div class="mx-auto flex">
+			<label class="bg-gray-500 shadow w-6 h-6 p-1 flex justify-center items-center mr-2 nigga rounded-lg">
+				<input type="checkbox" name="topic3" class="hidden" >
+				<svg class="hidden w-4 h-4 text-white pointer-events-none" viewBox="0 0 172 172"><g fill="none" stroke-width="none" stroke-miterlimit="10" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode:normal"><path d="M0 172V0h172v172z"/><path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z" fill="currentColor" stroke-width="1"/></g></svg>
+			</label>
+			<h2 class="text-white">Turing Machine(Overview)</h2>
+		</div>
+	</div>
+
+
+
+	<div class="slidecontainer text-center">
+        <h3 class="text-white">General level of comprehension</h3>
+		<input name="slider_val" type="range" min="1" max="100" value="50" class="slider" id="myRange">
+	</div>
+	<div class="flex justify-center space-x-8 mt-4">
+		<button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-8 w-20">
+		  Cancel
+		</button>
+		<br>
+		<button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-8 w-20">
+		  Submit
+		</button>
+	</div>
+</form>
+</body>
+</html>
