@@ -37,6 +37,8 @@ Import `initialize_database.sql` into your sql server.
 
 Create a new user `root` identified an empty password.  
 
+Make sure the mysqli extension is enabled in your php configuration file(php.ini).  
+
 Make sure port 25 is open for SMTP.  
 
 Copy the files in NUForum/NUforum to your document root.  
